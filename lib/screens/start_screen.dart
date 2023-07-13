@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:water_counter_app/assets/interval_progress_bar.dart';
+import 'package:intl/intl.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
@@ -15,35 +16,56 @@ class _StartScreenState extends State<StartScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 20.0,
-        centerTitle: false,
-        leadingWidth: 0,
-        title: Text(
-          'Hola Agua',
+        toolbarHeight: 16.0,
+        leadingWidth: 100,
+        Leading: Text(
+          'Hi Water',
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        //actions: [],
+        actions: [
+          _hour(),
+        ],
         ),
-      body: Column(
+        body: Sizebox(
+          heigth: 155.0,
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _totalMl(),
+          _verticalGap(),
           _indicators(),
+          _verticalGap(),
           _buttonReg(),          
         ],
       ),
+    ),
+    );
+  }
+  Widget _verticalGap(){
+    return const SizeBox(
+      height: 4.0,
+    );
+  }
+  Witget _hour(){
+    String formattedTime = DateFormat.Hm().format(DateTime.now());
+    return Text(
+     formattedTime,
+     style: Theme.of(context).textTheme.bodySmall,
     );
   }
   Widget _totalMl(){
     return Column(
         children: [
-          Text(
+          SizeBox(
+            height: 25.0,
+          child: Text(
                 '0 mL',
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
           Text(
             'Faltan 3000 mL',
             style: Theme.of(context).textTheme.bodyMedium,
+          ),
           ),
         ],
       );
@@ -142,7 +164,7 @@ Widget _buttonReg(){
               ),
               child: ElevatedButton(
                 onPressed: () { },
-                child: const Text('Hemos bebido agua'),
+                child: const Text('Hi your Water'),
               ),
             ),
           );

@@ -1,6 +1,6 @@
 # water_counter_app
 
-Este nuevo proyecto de water counter es un clon con fines educativos.
+Este nuevo proyecto de water counter es un clon con fines educativos y in fines de lucro.
 
 ## Getting Started
 

@@ -36,7 +36,7 @@ Widget _bar(){
       _interval(customColor: const Color.fromARGB(255, 169, 183, 60)),    
         _separator(),
       _interval(customColor: const Color.fromARGB(255, 192, 181, 60)),    
-        _separator(),
+        _separator(),            
       _interval(customColor: const Color.fromARGB(255, 230, 190, 64)),    
         _separator(),
       _interval(customColor: const Color.fromARGB(255, 237, 169, 59)),
