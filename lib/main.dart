@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:water_counter_app/screens/start_screen.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Water',
+      title: 'Water counter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
@@ -21,27 +20,22 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           color: Colors.black,
         ),
-        // extensions: <ThemeExtension<dynamic>>[
-        //   // CustomTheme(),
-        // ],
         textTheme: 
         const TextTheme(
-          headlineSmall: TextStyle(color: Colors.white,
-          fontWeight: FontWeight.bold),
-          bodyMedium: TextStyle(
-            color: Color.fromARGB(255, 76, 169, 248),
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-          ),
-          bodySmall: TextStyle(
-            color: Colors.white, 
-            fontSize: 12,
-            fontWeight: FontWeight.bold
+            headlineSmall: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            bodyMedium: TextStyle(
+              color: Color.fromARGB(255, 78, 169, 248),
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
+            bodySmall: TextStyle(
+              color: Colors.white,
+               fontSize: 12,
+               fontWeight: FontWeight.bold),
         ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
+        elevatedButtonTheme:ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGM(255, 68, 154, 243),
+            backgroundColor: const Color.fromARGB(255, 68, 154, 243),
             foregroundColor: Colors.white,
             textStyle: const TextStyle(
               fontWeight: FontWeight.bold,
